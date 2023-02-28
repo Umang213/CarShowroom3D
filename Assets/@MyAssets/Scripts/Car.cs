@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Car : MonoBehaviour
 {
+    public int carColorCode;
     public GameObject defaultBody;
     public GameObject body;
 

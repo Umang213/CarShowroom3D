@@ -251,7 +251,11 @@ public class CarBuildControler : MonoBehaviour
                         temp[i1].transform.SetParent(body.transform);
                         temp[i1].gameObject.Hide();
                     });
+                smoke.Play();
                 yield return new WaitForSeconds(0.3f);
+                smoke.Play();
+                yield return new WaitForSeconds(0.3f);
+                smoke.Play();
             }
 
             yield return new WaitForSeconds(1.5f);
@@ -324,7 +328,7 @@ public class CarBuildControler : MonoBehaviour
                 carPoint.shutter.transform.DOScaleY(0, 0.5f).SetDelay(0.5f);
                 customer.purchaseCar.transform.DOMove(carPoint.exitPoint.position, 5).OnComplete((() =>
                 {
-                    customer.purchaseCar.transform.rotation = carPoint.path.transform.rotation;
+                    // customer.purchaseCar.transform.rotation = carPoint.exitPoint.transform.rotation;
                     customer.purchaseCar.navMeshAgent.enabled = true;
                     customer.purchaseCar.navMeshAgent.SetDestination(carPoint.pathEndPoint.position);
                     Destroy(customer.gameObject);

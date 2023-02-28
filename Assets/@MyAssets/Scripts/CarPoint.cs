@@ -11,7 +11,6 @@ public class CarPoint : MonoBehaviour
     public Transform exitPoint;
     public Transform shutter;
     public Vector3 realPos;
-    public DOTweenPath path;
     public Transform pathEndPoint;
 
     private void Start()
